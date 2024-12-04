@@ -86,4 +86,4 @@ For detailed API documentation and examples, visit the [Postman Documentation](h
 The `/api/sync-forex-data` endpoint is implemented through a CRON job using [cron-job.org](https://cron-job.org). This ensures that the synchronization of forex data occurs automatically at scheduled intervals, keeping the database updated with the latest exchange rates.
 
 ## Deployment
-This application is configured for deployment on Railway.app.
+This application is configured for deployment on Railway.app.  LINK - [https://web-production-88ce.up.railway.app/api/sync-forex-data](https://web-production-88ce.up.railway.app/api/sync-forex-data)
