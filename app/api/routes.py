@@ -8,17 +8,19 @@ from ..services.scraper import ExchangeRateScraper
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import concurrent.futures
+import os
 
 # Initialize Flask app and enable CORS
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Database setup
-engine = create_engine('sqlite:///exchange_rates.db')
+database_url = os.getenv('DATABASE_URL', 'sqlite:///exchange_rates.db')
+engine = create_engine(database_url)
 Session = sessionmaker(bind=engine)
 
 def parse_period(period: str) -> timedelta:

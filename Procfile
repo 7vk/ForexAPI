@@ -1,1 +1,1 @@
- 
+web: gunicorn "app.api.routes:app"
