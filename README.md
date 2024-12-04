@@ -13,10 +13,6 @@ A Flask-based REST API for fetching and managing foreign exchange rates.
 Follow these steps to set up the Forex Exchange Rate API on your local machine:
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/forex-exchange-rate-api.git
-   cd forex-exchange-rate-api
-   ```
 
 2. **Create a Virtual Environment**:
    - **Linux/MacOS**:
